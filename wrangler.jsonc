@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "velhochico",
+  // Cloudflare Pages: frontend estático (Vite) em dist/ + API como Pages Function
+  // (functions/[[path]].ts). As bindings abaixo são lidas pelo Pages (suporte a
+  // Wrangler config) e também usadas por `wrangler pages dev` localmente.
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2025-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "velhochico-db",
+      "database_id": "a724abe4-c179-4a20-9cd9-95f1cc77da0c",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Bucket R2 para uploads do admin. Criar com:
+  //   npx wrangler r2 bucket create velhochico-media
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "velhochico-media"
+    }
+  ]
+}
