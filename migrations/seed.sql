@@ -58,7 +58,7 @@ INSERT OR REPLACE INTO settings (key, value) VALUES
 ('promo', json('{
   "title": "Reserve ou programe sua estadia. Venha viver momentos especiais no Hotel Velho Chico.",
   "ctaLabel": "RESERVAR",
-  "ctaUrl": "https://wa.me/5588981573001",
+  "ctaUrl": "https://pousada-velho-chico.artaxnet.com/",
   "image": "/uploads/promo.jpg"
 }')),
 ('contact', json('{

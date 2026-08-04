@@ -17,27 +17,18 @@ const MAX_CHILDREN = 6;
 const MAX_CHILD_AGE = 17;
 const DEFAULT_CHILD_AGE = 6;
 
-// Reserva via WhatsApp (número oficial do Velho Chico), com a data e o
-// número de hóspedes já preenchidos na mensagem.
-const WHATSAPP_NUMBER = "5588981573001";
+// Motor de reservas oficial do Velho Chico (Artaxnet) — mesmo link usado
+// no botão "Reservar" do site original (velhochicoicaraizinho.com.br).
+const BOOKING_URL = "https://pousada-velho-chico.artaxnet.com/";
 
-export function buildBookingUrl(opts: {
+export function buildBookingUrl(_opts: {
   checkin: string;
   checkout: string;
   adults: number;
   childAges: number[];
   rooms?: number;
 }) {
-  const children = opts.childAges.length;
-  const guests = `${opts.adults} adulto${opts.adults === 1 ? "" : "s"}${
-    children > 0 ? ` e ${children} criança${children === 1 ? "" : "s"}` : ""
-  }`;
-  const message =
-    `Olá! Gostaria de reservar uma estadia na Pousada Velho Chico.\n` +
-    `Check-in: ${formatBR(opts.checkin)}\n` +
-    `Check-out: ${formatBR(opts.checkout)}\n` +
-    `Hóspedes: ${guests}`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  return BOOKING_URL;
 }
 
 export default function BookingBar() {
@@ -71,8 +62,8 @@ export default function BookingBar() {
         <div className="hidden px-6 py-4 text-center text-ink md:block md:text-left">
           <p className="font-display text-sm leading-tight text-ink">
             reserve
-            <br /> pelo
-            <br /> whatsapp
+            <br /> direto
+            <br /> conosco
           </p>
         </div>
 
