@@ -61,9 +61,9 @@ export default function BookingBar() {
       <div className="grid grid-cols-2 items-center gap-px md:grid-cols-[auto_1fr_1fr_1fr_auto]">
         <div className="hidden px-6 py-4 text-center text-ink md:block md:text-left">
           <p className="font-display text-sm leading-tight text-ink">
-            reserve
-            <br /> direto
-            <br /> conosco
+            o melhor
+            <br /> preço
+            <br /> garantido
           </p>
         </div>
 
