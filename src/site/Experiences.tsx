@@ -56,14 +56,14 @@ export default function Experiences({
 
           <button
             onClick={() => scroll(-1)}
-            className="absolute left-1 top-[6.5rem] z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-brand shadow-lg transition hover:bg-brand hover:text-white md:-left-3"
+            className="absolute left-2 top-[6.5rem] z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-brand shadow-lg transition hover:bg-brand hover:text-white"
             aria-label="Anterior"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={() => scroll(1)}
-            className="absolute right-1 top-[6.5rem] z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-brand shadow-lg transition hover:bg-brand hover:text-white md:-right-3"
+            className="absolute right-2 top-[6.5rem] z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-brand shadow-lg transition hover:bg-brand hover:text-white"
             aria-label="Próximo"
           >
             <ChevronRight className="h-5 w-5" />

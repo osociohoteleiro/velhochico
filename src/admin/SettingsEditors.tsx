@@ -226,7 +226,7 @@ export function ThemeEditor({ initial }: { initial: ThemeSettings }) {
           Pré-visualização
         </p>
         <h4 className="font-display text-2xl" style={{ color: v.ink }}>
-          Pousada Praia Bela
+          Pousada Velho Chico
         </h4>
         <button
           type="button"

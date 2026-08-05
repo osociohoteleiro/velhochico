@@ -144,7 +144,7 @@ export default function PostPage() {
 
             <div className="text-base text-gray-700">{renderMarkdown(post.content)}</div>
 
-            <PostCTA contact={settings.contact} />
+            <PostCTA contact={settings.contact} tour={settings.tour} />
 
             <div className="mt-8 border-t border-gray-100 pt-6">
               <Link to="/blog" className="text-sm font-medium text-brand hover:underline">

@@ -136,7 +136,9 @@ export default function AdminApp() {
     <div className="min-h-screen bg-gray-50">
       <header className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-200 bg-white px-6 py-3 shadow-sm">
         <div className="flex items-center gap-3">
-          <span className="font-display text-xl tracking-wide text-ink">PRAIA BELA · Admin</span>
+          <span className="font-display text-xl tracking-wide text-ink">
+            {s.general.logoText || "VELHO CHICO"} · Admin
+          </span>
         </div>
         <div className="flex items-center gap-3">
           <a href="/" target="_blank" className="text-sm text-brand hover:underline">
@@ -214,10 +216,10 @@ export default function AdminApp() {
             <TourEditor
               initial={
                 s.tour ?? {
-                  enabled: true,
+                  enabled: false,
                   eyebrow: "EXPLORE A POUSADA",
                   title: "Tour Virtual 360°",
-                  subtitle: "Passeie pela Pousada Praia Bela como se estivesse aqui. Arraste para girar e explore cada ambiente.",
+                  subtitle: "Passeie pela Pousada Velho Chico como se estivesse aqui. Arraste para girar e explore cada ambiente.",
                   url: "",
                 }
               }

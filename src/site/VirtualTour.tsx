@@ -69,7 +69,7 @@ export default function VirtualTour({ tour }: { tour?: TourSettings | null }) {
           {visible ? (
             <iframe
               src={tour.url}
-              title={`${tour.title || "Tour Virtual 360°"} - Pousada Praia Bela`}
+              title={`${tour.title || "Tour Virtual 360°"} - Pousada Velho Chico`}
               className="absolute inset-0 h-full w-full border-0"
               allow={IFRAME_ALLOW}
               allowFullScreen
@@ -110,7 +110,7 @@ export default function VirtualTour({ tour }: { tour?: TourSettings | null }) {
           <div className="relative flex-1">
             <iframe
               src={tour.url}
-              title={`${tour.title || "Tour Virtual 360°"} - Pousada Praia Bela (tela cheia)`}
+              title={`${tour.title || "Tour Virtual 360°"} - Pousada Velho Chico (tela cheia)`}
               className="absolute inset-0 h-full w-full border-0"
               allow={IFRAME_ALLOW}
               allowFullScreen
