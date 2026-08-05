@@ -197,7 +197,10 @@ INSERT OR REPLACE INTO settings (key, value) VALUES
   "url": ""
 }'));
 
--- ---------- Experiences (passeios: Moitas e Caetanos) ----------
+-- ---------- Experiences (passeios: Moitas, Caetanos + 3 novas) ----------
+-- Cada card de experiência linka para /blog/<slug-do-título> (ver slugify()
+-- em src/lib/types.ts) — por isso title aqui e title do post correspondente
+-- abaixo devem gerar o mesmo slug.
 DELETE FROM experiences;
 INSERT INTO experiences (title, description, image_url, sort_order) VALUES
 ('Navegue com seu amor por Moitas',
@@ -205,7 +208,16 @@ INSERT INTO experiences (title, description, image_url, sort_order) VALUES
  '/uploads/experience-moitas.jpg', 1),
 ('Descubra os Lençóis Cearenses, em Caetanos',
  'Coqueiros da Preguiça (palco para fotos inesquecíveis), Pedra do Coração (símbolo natural para juras de amor) e almoço opcional na vila de pescadores com peixe fresco na brasa. Ideal para famílias descobrirem juntas paisagens que parecem cenário de filme.',
- '/uploads/experience-caetanos.jpg', 2);
+ '/uploads/experience-caetanos.jpg', 2),
+('Kitesurf em Icaraizinho',
+ 'Ventos constantes de julho a janeiro fazem de Icaraizinho de Amontada um dos points de kitesurf e windsurf mais procurados do Brasil. Escolas locais oferecem aulas para iniciantes e equipamento para quem já tem experiência.',
+ '/uploads/experience-kitesurf.jpg', 3),
+('Pôr do Sol na Duna',
+ 'Uma tradição de quem visita o litoral oeste cearense: subir a duna no fim da tarde para ver o sol se pôr sobre o mar, com o vilarejo de pescadores e os coqueirais como cenário.',
+ '/uploads/experience-por-do-sol.jpg', 4),
+('Passeio de Jangada',
+ 'Embarque em uma jangada tradicional cearense e navegue pela costa de Icaraizinho com pescadores locais — um mergulho na cultura e no ritmo de vida do litoral.',
+ '/uploads/experience-jangada.jpg', 5);
 
 -- ---------- Promotions (sem promoções ativas no site original) ----------
 DELETE FROM promotions;
@@ -213,5 +225,90 @@ DELETE FROM promotions;
 -- ---------- Packages (sem pacotes no site original) ----------
 DELETE FROM packages;
 
--- ---------- Posts (sem blog no site original) ----------
+-- ---------- Posts (uma postagem por experiência, aberta ao clicar no card) ----------
 DELETE FROM posts;
+INSERT INTO posts (title, slug, excerpt, content, cover_image, category, published_at, sort_order) VALUES
+('Navegue com seu amor por Moitas',
+ 'navegue-com-seu-amor-por-moitas',
+ 'Um passeio de barco pelo Rio Aracatiaçu, da Praia de Moitas até o manguezal, com parada na Ilha das Ostras.',
+ '# Navegue com seu amor por Moitas
+
+Nesta experiência, passeamos juntos de barco pelo Rio Aracatiaçu. Partimos da Praia de Moitas, seguimos até o encontro do rio com o mar na Praia da Ponta e adentramos em um manguezal perfeito para fotos com seu amor.
+
+O passeio por Moitas, pensado pelo Velho Chico, também oferece:
+
+- Parada na Ilha das Ostras, com opções de petiscos nas barracas (ostra, povo, peixe, camarão e drinks).
+- Visita às Dunas da Barra de Moitas, para apreciar o tempo passar devagar.
+
+---
+
+Reserve seu passeio com a equipe do Velho Chico e viva essa experiência em Icaraizinho de Amontada.',
+ '/uploads/experience-moitas.jpg', 'Experiências', '2026-01-10', 1),
+('Descubra os Lençóis Cearenses, em Caetanos',
+ 'descubra-os-lencois-cearenses-em-caetanos',
+ 'Coqueiros da Preguiça, Pedra do Coração e um almoço opcional na vila de pescadores — os Lençóis Cearenses de Caetanos.',
+ '# Descubra os Lençóis Cearenses, em Caetanos
+
+Histórias para contar por anos começam aqui. Icaraizinho de Amontada é uma das praias mais charmosas do litoral oeste cearense, e a experiência em Caetanos leva você aos Lençóis Cearenses — dunas e lagoas que parecem cenário de filme.
+
+**O passeio inclui:**
+
+- Coqueiros da Preguiça, palco para fotos inesquecíveis.
+- Pedra do Coração, símbolo natural para juras de amor.
+- Almoço opcional na vila de pescadores, com peixe fresco na brasa.
+
+Ideal para famílias descobrirem juntas paisagens únicas do Ceará.
+
+---
+
+Reserve seu passeio com a equipe do Velho Chico.',
+ '/uploads/experience-caetanos.jpg', 'Experiências', '2026-01-17', 2),
+('Kitesurf em Icaraizinho',
+ 'kitesurf-em-icaraizinho',
+ 'Um dos melhores points de kitesurf do Brasil: ventos constantes, águas mornas e escolas para todos os níveis.',
+ '# Kitesurf em Icaraizinho
+
+Icaraizinho de Amontada é reconhecida internacionalmente como um dos melhores spots de kitesurf e windsurf do Brasil. Os ventos alísios, fortes e constantes entre julho e janeiro, combinados com águas mornas e uma extensa baía protegida, atraem praticantes do mundo todo.
+
+**Para quem quer aprender ou evoluir:**
+
+- Escolas locais com instrutores credenciados, para iniciantes e avançados.
+- Equipamento disponível para aluguel.
+- Lagoas e trechos protegidos, ideais para quem está começando.
+
+*Foto ilustrativa: kitesurf no litoral cearense.*
+
+---
+
+Fale com a nossa equipe para indicarmos a escola parceira mais próxima da pousada.',
+ '/uploads/experience-kitesurf.jpg', 'Experiências', '2026-01-24', 3),
+('Pôr do Sol na Duna',
+ 'por-do-sol-na-duna',
+ 'Uma tradição do litoral oeste cearense: subir a duna no fim da tarde para ver o sol se pôr sobre o mar.',
+ '# Pôr do Sol na Duna
+
+Um dos rituais mais bonitos de quem visita o litoral oeste do Ceará é subir a uma das dunas ao entardecer para acompanhar o sol se pôr sobre o mar. O céu se pinta de tons de laranja e dourado, com o vilarejo de pescadores e os coqueirais como cenário.
+
+**Dica do Velho Chico:** chegue com uns 20 minutos de antecedência para garantir um bom lugar e aproveitar a luz dourada que antecede o pôr do sol.
+
+*Foto ilustrativa: Duna do Pôr do Sol, litoral cearense.*
+
+---
+
+Pergunte na recepção sobre os melhores pontos para o pôr do sol na região.',
+ '/uploads/experience-por-do-sol.jpg', 'Experiências', '2026-01-31', 4),
+('Passeio de Jangada',
+ 'passeio-de-jangada',
+ 'Navegue pela costa de Icaraizinho em uma jangada tradicional cearense, ao lado de pescadores locais.',
+ '# Passeio de Jangada
+
+A jangada é um símbolo da cultura cearense: uma embarcação simples, feita para enfrentar o mar com poucos recursos, usada por gerações de pescadores no litoral do Ceará.
+
+Em Icaraizinho, é possível embarcar em uma jangada tradicional e navegar pela costa ao lado de pescadores locais — uma forma autêntica de conhecer o ritmo de vida da região e ver a pousada e a praia por um novo ângulo.
+
+*Foto ilustrativa: jangadas tradicionais no litoral cearense.*
+
+---
+
+Converse com a nossa equipe para programar o seu passeio de jangada.',
+ '/uploads/experience-jangada.jpg', 'Experiências', '2026-02-07', 5);

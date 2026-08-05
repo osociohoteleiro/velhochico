@@ -90,10 +90,15 @@ npm run pages:dev   # build + wrangler pages dev (http://localhost:8788)
 > preenchidas pelo admin. O botão "RESERVAR" leva direto para o motor de reservas
 > Artaxnet (`https://pousada-velho-chico.artaxnet.com/`), igual ao site original.
 >
-> A foto de `public/uploads/promo.jpg` (faixa "Reserve ou programe sua estadia") é do
-> [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Praia_icarai_de_amontada_-_ceara.jpg),
-> por Fabiobarros, licenciada em **CC BY-SA 4.0** — mantenha a atribuição se trocar de lugar
-> ou reutilizar em outro material.
+> Fotos do [Wikimedia Commons](https://commons.wikimedia.org/), licenciadas em **CC BY-SA**
+> — mantenha a atribuição se trocar de lugar ou reutilizar em outro material:
+>
+> | Arquivo | Origem | Autor |
+> |---|---|---|
+> | `public/uploads/promo.jpg` | [Praia de Icaraí de Amontada](https://commons.wikimedia.org/wiki/File:Praia_icarai_de_amontada_-_ceara.jpg) | Fabiobarros |
+> | `public/uploads/experience-kitesurf.jpg` | [Kite Cauípe](https://commons.wikimedia.org/wiki/File:Kite_Cauipe.jpg) (Lagoa do Cauípe, CE — foto ilustrativa) | Elissonm |
+> | `public/uploads/experience-por-do-sol.jpg` | [Duna do Pôr do Sol - Jericoacoara](https://commons.wikimedia.org/wiki/File:Duna_do_P%C3%B4r_do_Sol_-_Jericoacoara.JPG) (foto ilustrativa) | Sibelicarvalho |
+> | `public/uploads/experience-jangada.jpg` | [Jangadas, Ceará](https://commons.wikimedia.org/wiki/File:Jangadas,_Cear%C3%A1.jpg) | LBM1948 |
 
 ## Painel administrativo
 

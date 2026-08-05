@@ -170,6 +170,16 @@ export function sortPostsByDateDesc(posts: Post[]): Post[] {
   );
 }
 
+/** Deriva um slug de URL a partir de um título (sem acentos, minúsculo, hifens). */
+export function slugify(title: string): string {
+  return title
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export interface SiteContent {
   settings: {
     general: GeneralSettings;

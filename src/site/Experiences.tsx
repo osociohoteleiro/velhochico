@@ -1,4 +1,5 @@
-import type { Experience, SectionTitle } from "../lib/types";
+import { Link } from "react-router-dom";
+import { slugify, type Experience, type SectionTitle } from "../lib/types";
 
 export default function Experiences({
   experiences,
@@ -19,9 +20,10 @@ export default function Experiences({
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {experiences.map((exp) => (
-            <article
+            <Link
               key={exp.id}
-              className="group overflow-hidden rounded-md bg-white/85 shadow-sm transition hover:shadow-lg"
+              to={`/blog/${slugify(exp.title)}`}
+              className="group block overflow-hidden rounded-md bg-white/85 shadow-sm transition hover:shadow-lg"
             >
               <div className="h-52 overflow-hidden">
                 <img
@@ -31,12 +33,17 @@ export default function Experiences({
                 />
               </div>
               <div className="p-5">
-                <h3 className="font-display text-xl tracking-wide text-ink">{exp.title}</h3>
+                <h3 className="font-display text-xl tracking-wide text-ink group-hover:text-brand">
+                  {exp.title}
+                </h3>
                 {exp.description && (
                   <p className="mt-2 text-sm leading-relaxed text-gray-600">{exp.description}</p>
                 )}
+                <span className="mt-3 inline-block text-sm font-medium tracking-wide text-brand">
+                  Ler mais →
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
