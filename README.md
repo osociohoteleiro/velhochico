@@ -82,16 +82,18 @@ localmente, use:
 npm run pages:dev   # build + wrangler pages dev (http://localhost:8788)
 ```
 
-> **Origem do conteúdo:** todo o texto e as imagens vieram de
+> **Origem do conteúdo:** a maior parte do texto e das imagens vieram de
 > [velhochicoicaraizinho.com.br](https://velhochicoicaraizinho.com.br/) (WordPress/Elementor).
 > As imagens foram baixadas para `public/uploads/`; novos uploads feitos pelo admin vão
 > para o R2 `velhochico-media`. O site original não tem pacotes, promoções nem blog —
 > essas tabelas existem no esquema (herdado do site-loft) mas ficam vazias até serem
-> preenchidas pelo admin. A reserva ("RESERVAR") abre uma conversa no WhatsApp
-> (+55 88 98157-3001) com as datas e o número de hóspedes já preenchidos — o site
-> original usa o motor Artaxnet, mas o link direto de reserva com parâmetros não é
-> público, então o WhatsApp foi escolhido como CTA principal (mesmo padrão do widget
-> de chat que aparece em todas as páginas do site original).
+> preenchidas pelo admin. O botão "RESERVAR" leva direto para o motor de reservas
+> Artaxnet (`https://pousada-velho-chico.artaxnet.com/`), igual ao site original.
+>
+> A foto de `public/uploads/promo.jpg` (faixa "Reserve ou programe sua estadia") é do
+> [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Praia_icarai_de_amontada_-_ceara.jpg),
+> por Fabiobarros, licenciada em **CC BY-SA 4.0** — mantenha a atribuição se trocar de lugar
+> ou reutilizar em outro material.
 
 ## Painel administrativo
 
