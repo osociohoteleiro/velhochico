@@ -2,11 +2,11 @@ import type { ThemeSettings } from "../lib/types";
 
 // Paleta padrão — espelha as variáveis definidas em src/index.css (@theme).
 export const DEFAULT_THEME: ThemeSettings = {
-  brand: "#a93a16",
-  brandDark: "#7c2a10",
-  brandLight: "#f6ece4",
-  ink: "#2c1b12",
-  eyebrow: "#c1521f",
+  brand: "#b8501f",
+  brandDark: "#8f3814",
+  brandLight: "#f8efe7",
+  ink: "#5c3a22",
+  eyebrow: "#c9762f",
 };
 
 const HEX = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;

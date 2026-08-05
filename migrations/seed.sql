@@ -180,11 +180,11 @@ INSERT OR REPLACE INTO settings (key, value) VALUES
 -- Terracota extraído da logo original (#a93a16), com tons areia/litoral.
 INSERT OR REPLACE INTO settings (key, value) VALUES
 ('theme', json('{
-  "brand": "#a93a16",
-  "brandDark": "#7c2a10",
-  "brandLight": "#f6ece4",
-  "ink": "#2c1b12",
-  "eyebrow": "#c1521f"
+  "brand": "#b8501f",
+  "brandDark": "#8f3814",
+  "brandLight": "#f8efe7",
+  "ink": "#5c3a22",
+  "eyebrow": "#c9762f"
 }'));
 
 -- ---------- Tour Virtual 360° (desativado — Velho Chico não possui) ----------

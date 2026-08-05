@@ -4,11 +4,11 @@
   --font-display: "Cinzel", Georgia, serif;
   --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand: #a93a16;
-  --color-brand-dark: #7c2a10;
-  --color-brand-light: #f6ece4;
-  --color-ink: #2c1b12;
-  --color-eyebrow: #c1521f;
+  --color-brand: #b8501f;
+  --color-brand-dark: #8f3814;
+  --color-brand-light: #f8efe7;
+  --color-ink: #5c3a22;
+  --color-eyebrow: #c9762f;
 }
 
 :root {
