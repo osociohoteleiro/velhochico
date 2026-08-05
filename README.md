@@ -35,7 +35,7 @@ npm run dev                   # http://localhost:5170 (porta pode variar)
 ```
 
 - Site: <http://localhost:5170/>
-- Admin: <http://localhost:5170/admin> — senha padrão **`admin123`** (definida em `.dev.vars`).
+- Admin: <http://localhost:5170/admin> — senha definida em `ADMIN_PASSWORD` no `.dev.vars` (não committado).
 
 > A senha e o segredo de assinatura ficam em `.dev.vars` (`ADMIN_PASSWORD`, `AUTH_SECRET`).
 > Troque-os antes de ir para produção.
