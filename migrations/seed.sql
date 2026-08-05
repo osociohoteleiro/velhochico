@@ -65,7 +65,7 @@ INSERT OR REPLACE INTO settings (key, value) VALUES
   "cnpj": "45.434.954/0001-40",
   "groupText": "A Pousada Velho Chico proporciona as melhores experiências de hospedagem, conforto e gastronomia cearense em Icaraizinho de Amontada, Ceará.",
   "address": "R. Francisco Gonçalves de Souza, 292 - Icaraí, Amontada - CE, CEP 62545-000",
-  "email": "",
+  "email": "pousadavelhochicoicaraizinho@gmail.com",
   "phone": "+55 88 98157-3001",
   "whatsapp": "5588981573001",
   "instagram": "https://www.instagram.com/velhochicoicaraizinhooficial",
