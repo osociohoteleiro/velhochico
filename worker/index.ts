@@ -310,9 +310,18 @@ async function injectTracking(res: Response, db: D1Database): Promise<Response> 
   const contentType = res.headers.get("content-type") || "";
   if (!contentType.includes("text/html")) return res;
 
-  const row = await db
-    .prepare("SELECT value FROM settings WHERE key = 'tracking'")
-    .first<{ value: string }>();
+  // Esta consulta roda em TODO GET de HTML. Se o D1 falhar (indisponível,
+  // schema ainda não migrado), o site inteiro cairia em 500 — inclusive
+  // páginas que não dependem de banco. Degrada sem rastreamento em vez disso.
+  let row: { value: string } | null;
+  try {
+    row = await db
+      .prepare("SELECT value FROM settings WHERE key = 'tracking'")
+      .first<{ value: string }>();
+  } catch (err) {
+    console.error("injectTracking: falha ao ler settings do D1", err);
+    return res;
+  }
   if (!row) return res;
 
   let tracking: Record<string, unknown>;
