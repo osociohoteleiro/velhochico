@@ -86,7 +86,7 @@ export default function BookingBar() {
             href={buildBookingUrl({ checkin, checkout, adults, childAges })}
             target="_blank"
             rel="noopener noreferrer"
-            className="block rounded border border-brand px-8 py-3 text-center font-medium tracking-widest text-brand transition hover:bg-brand hover:text-white md:py-4"
+            className="block rounded-full border border-brand px-8 py-3 text-center font-medium tracking-widest text-brand transition hover:bg-brand hover:text-white md:py-4"
           >
             RESERVAR
           </a>

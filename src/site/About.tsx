@@ -16,7 +16,7 @@ export default function About({ about }: { about: AboutSettings }) {
           {about.ctaLabel && (
             <a
               href={about.ctaUrl || "#reservar"}
-              className="btn-brand mt-4 inline-block rounded px-8 py-4 text-sm font-medium tracking-wider"
+              className="btn-brand mt-4 inline-block rounded-full px-8 py-4 text-sm font-medium tracking-wider"
             >
               {about.ctaLabel}
             </a>

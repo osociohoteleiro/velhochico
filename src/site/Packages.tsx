@@ -80,7 +80,7 @@ export default function Packages({
                   </div>
                   <a
                     href="#reservar"
-                    className="btn-brand rounded px-5 py-2.5 text-sm font-medium tracking-wide"
+                    className="btn-brand rounded-full px-5 py-2.5 text-sm font-medium tracking-wide"
                   >
                     Reservar
                   </a>

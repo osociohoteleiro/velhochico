@@ -31,7 +31,7 @@ export default function BlogTeaser({
           <div className="mt-10 text-center">
             <Link
               to="/blog"
-              className="btn-brand inline-block rounded px-8 py-3 text-sm font-medium tracking-widest"
+              className="btn-brand inline-block rounded-full px-8 py-3 text-sm font-medium tracking-widest"
             >
               VER TODAS AS POSTAGENS
             </Link>

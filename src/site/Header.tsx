@@ -63,7 +63,7 @@ export default function Header({
             </span>
             <a
               href={anchor("#reservar")}
-              className="btn-brand rounded px-5 py-3 text-sm font-medium tracking-wider"
+              className="btn-brand rounded-full px-5 py-3 text-sm font-medium tracking-wider"
             >
               FAÇA UMA RESERVA
             </a>
@@ -103,7 +103,7 @@ export default function Header({
                 </a>
               ),
             )}
-            <a href={anchor("#reservar")} className="btn-brand mt-3 rounded px-5 py-3 text-center text-sm">
+            <a href={anchor("#reservar")} className="btn-brand mt-3 rounded-full px-5 py-3 text-center text-sm">
               FAÇA UMA RESERVA
             </a>
           </nav>

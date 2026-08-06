@@ -15,7 +15,7 @@ export default function Location({ location }: { location: LocationSettings }) {
           <div className="mt-6 text-center">
             <a
               href={location.ctaUrl || "#reservar"}
-              className="btn-brand inline-block rounded px-8 py-4 text-sm font-medium tracking-wider"
+              className="btn-brand inline-block rounded-full px-8 py-4 text-sm font-medium tracking-wider"
             >
               {location.ctaLabel}
             </a>
