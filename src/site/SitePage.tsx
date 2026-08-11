@@ -97,7 +97,7 @@ export default function SitePage() {
           <div
             id="reservar"
             ref={bookingWrapperRef}
-            className="booking-anchor md:sticky top-20 z-30 flex justify-center px-4 bg-white"
+            className="booking-anchor md:sticky top-28 z-30 flex justify-center px-4 bg-white"
           >
             <div
               ref={bookingCardRef}
